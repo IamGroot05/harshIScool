@@ -1,0 +1,132 @@
+
+
+@mixin flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent-container{
+    background-color: #191919;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    h1{
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        margin: 0;
+        font-weight: unset;
+    }
+    .login-container{
+          @include flex-container();
+          flex-direction: column;
+          color: #ffff;
+          
+          .head-span{
+            position: relative;
+            top: -13px;
+            line-height: 100%;
+            font-weight: lighter
+            
+            
+          }
+
+          form{
+            @include flex-container();
+            flex-direction: column;
+         
+          
+            .mat-form-field-appearance-legacy .mat-form-field-underline {
+                height: 0 !important;
+            }
+
+            .example-full-width {
+                width: 320px;
+                border-radius: 4px;
+                border-bottom: 4px ;
+              
+                .eye-btn{
+                    border: none;
+                    background-color: transparent;
+                    margin-right: 20px;
+                }
+            }
+            .submit-button{
+                margin-top: 60px;
+                width: 320px;
+                height: 54px;
+                background-color: #7ECC29;
+                color: #191919;
+                width: 500;
+                font-style: normal;
+                border: none;
+                border-radius: 4px;
+            } 
+        }  
+    }
+
+    .radio-btn{
+       background-color: #191919;
+       flex-direction: column;
+       display: flex;
+       width: 100%;
+
+       mat-radio-group{
+        display: flex;
+        gap :20%;
+
+        span{
+            display: block;
+            background-color: #ffff;
+            color: #191919;
+            width: 80px;
+            height: 48px;
+            border-radius: 4px;
+            text-align: justify;
+            font-size: 16px;
+
+        }
+       }
+
+      
+    }
+    
+
+
+}
+.mat-mdc-radio-button.mat-accent {
+    --mdc-radio-disabled-selected-icon-color: #000000;
+    --mdc-radio-disabled-unselected-icon-color: #1D1C1C;
+    --mdc-radio-unselected-focus-icon-color: #FCFCFC;
+    --mdc-radio-unselected-hover-icon-color: #d3d3d3;
+    --mdc-radio-unselected-icon-color: rgba(245, 243, 243, 0.54);
+    --mdc-radio-unselected-pressed-icon-color: rgba(255, 255, 255, 0.54);
+    --mdc-radio-selected-focus-icon-color: #7ECC29;
+    --mdc-radio-selected-hover-icon-color: #7ECC29;
+    --mdc-radio-selected-icon-color: #7ECC29;
+    --mdc-radio-selected-pressed-icon-color: #FCFCFC;
+    --mat-mdc-radio-ripple-color: #FFFFFF;
+    --mat-mdc-radio-checked-ripple-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lane-id , .lane-type{
+    display:flex;
+    justify-content: space-around;
+}

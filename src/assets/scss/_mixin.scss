@@ -1,0 +1,20 @@
+@mixin generateCustomAliasClasses($attrName,$aliasName,$start:1,$step:1,$end:500,$suffix:'px') {
+    @for $i from $step through $end {
+        // .h-1, .h-2......
+        .#{$aliasName}#{$i} {
+             #{$attrName}:#{$i}#{$suffix};
+        }
+    }
+}
+// Width
+@include generateCustomAliasClasses('width','w-',1,1,500,'px');
+@include generateCustomAliasClasses('width','wp-',1,1,100,'%');
+// Height
+@include generateCustomAliasClasses('height','h-',1,1,500,'px');
+@include generateCustomAliasClasses('height','hp-',1,1,100,'%');
+// Font
+@include generateCustomAliasClasses('font-size','fs-',1,1,100,'px');
+@include generateCustomAliasClasses('font-weight','fw-',100,1,1000);
+
+//Margin-Top
+@include generateCustomAliasClasses('margin-top','mt-',1,1,100,'%');
